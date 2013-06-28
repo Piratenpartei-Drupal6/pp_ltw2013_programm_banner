@@ -39,7 +39,7 @@ function pp_ltw2013_programm_banner_block($op='list', $delta=0) {
 				$module_path = drupal_get_path('module', 'pp_ltw2013_programm_banner');
 
 				$block_content = '<div style="padding-left: 18px;">';
-				$block_content .= '<p><a href="'.$url.'" title="Landtagswahl-Programm 2013"><img src="/'.$module_path.'/pp_ltw2013_programm_banner.png" width="160" height="105" alt="Landtagswahl-Programm 2013" border="0"/></a></p>';
+				$block_content .= '<p><a href="'.$url.'" title="Landtagswahl-Programm 2013"><img src="/'.$module_path.'/pp_ltw2013_programm_banner.png" width="160" height="220" alt="Landtagswahl-Programm 2013" border="0"/></a></p>';
 				$block_content .= '</div>';
 
 			// set up the block
