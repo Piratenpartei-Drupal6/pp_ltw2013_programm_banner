@@ -1,0 +1,6 @@
+; $Id$
+package = Piratenpartei
+name = Piratenpartei Landtagswahl 2013 Programm-Banner
+description = Zeigt den Block zur Anzeige des Programm-Banners der Landtagswahl 2013 an.
+core = 6.x
+version = "6.x-1.0"

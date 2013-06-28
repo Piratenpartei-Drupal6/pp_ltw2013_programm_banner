@@ -1,0 +1,52 @@
+<?php
+
+/**
+* Display help and module information.
+* @param path
+*   Which path of the site we're displaying help.
+* @param arg
+*   Array that holds the current path as would be returned from arg() function.
+* @return
+*   help text for the path.
+*/
+function pp_ltw2013_programm_banner_help($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case "admin/help#pp_ltw2013_programm_banner":
+      $output = '<p>'. t("Zeigt den Block des Programm-Banners der Landtagswahl 2013").'</p>';
+      break;
+  }
+  return $output;
+} // function pp_ltw2013_programm_banner_help
+
+
+/**
+* Generate HTML for the pp_ltw2013_programm_banner block
+* @param op the operation from the URL
+* @param delta offset
+* @returns block HTML
+*/
+function pp_ltw2013_programm_banner_block($op='list', $delta=0) {
+	// listing of blocks, such as on the admin/block page
+		if ($op == "list") {
+			$block[0]["info"] = "Piraten - Landtagswahl-Programm 2013");
+			return $block;
+		} else if ($op == 'view') {
+			// our block content
+				$title = "Landtagswahl-Programm 2013";
+				$url = "https://www.piratenpartei-hessen.de/unsere-ziele";
+
+				$module_path = drupal_get_path('module', 'pp_ltw2013_programm_banner');
+
+				$block_content = '<div style="padding-left: 18px;">';
+				$block_content .= '<p><a href="'.$url.'" title="Landtagswahl-Programm 2013"><img src="/'.$module_path.'/pp_ltw2013_programm_banner.png" width="160" height="105" alt="Landtagswahl-Programm 2013" border="0"/></a></p>';
+				$block_content .= '</div>';
+
+			// set up the block
+				$block['subject'] = $title;
+				$block['content'] = $block_content;
+				return $block;
+		}
+}
+
+?>
