@@ -29,7 +29,7 @@ function pp_ltw2013_programm_banner_help($path, $arg) {
 function pp_ltw2013_programm_banner_block($op='list', $delta=0) {
 	// listing of blocks, such as on the admin/block page
 		if ($op == "list") {
-			$block[0]["info"] = "Piraten - Landtagswahl-Programm 2013");
+			$block[0]["info"] = "Piraten - Landtagswahl-Programm 2013";
 			return $block;
 		} else if ($op == 'view') {
 			// our block content
