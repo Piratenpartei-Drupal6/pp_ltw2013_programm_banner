@@ -1,7 +1,7 @@
 var pp_ltw2013_programm_banner_current = 0;
 
 var pp_ltw2013_programm_banner_links = new Array();
-    pp_ltw2013_programm_banner_links[0] = "https://www.piratenpartei-hessen.de/unsere-ziele;
+    pp_ltw2013_programm_banner_links[0] = "https://www.piratenpartei-hessen.de/unsere-ziele";
     pp_ltw2013_programm_banner_links[1] = "https://www.piratenpartei.de/wp-content/uploads/2013/06/PP-Bund-BTW13v1.pdf";
 
 $(document).ready(function() {
