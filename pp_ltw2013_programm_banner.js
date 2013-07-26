@@ -17,7 +17,7 @@ $(document).ready(function() {
 });
 
 function onProgrammBannerCycleAfter() { 
-    console.log($(this));
-	pp_ltw2013_programm_banner_current = $(this).attr("ref");
+    console.log($(this).attr('ref'));
+	pp_ltw2013_programm_banner_current = $(this).attr('ref');
 	console.log(pp_ltw2013_programm_banner_current);
 }
