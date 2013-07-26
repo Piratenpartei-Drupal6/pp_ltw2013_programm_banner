@@ -21,6 +21,23 @@ function pp_ltw2013_programm_banner_help($path, $arg) {
 
 
 /**
+ * Implementation of hook_init().
+ *
+ * These includes do not need to be loaded for cached pages.
+ */
+function pp_ltw2013_programm_banner_init() {
+  // Add necessary CSS and JS.
+  // TODO: These shouldn't be loaded on every page, but block caching omits
+  // CSS and JS files that would be otherwise added.
+  drupal_add_css(drupal_get_path('module', 'pp_ltw2013_programm_banner') .'/pp_ltw2013_programm_banner.css');
+  drupal_add_js(drupal_get_path('module', 'pp_ltw2013_programm_banner') .'/jquery.cycle.lite.js');
+  drupal_add_js(drupal_get_path('module', 'pp_ltw2013_programm_banner') .'/pp_ltw2013_programm_banner.js');
+
+  // prevent caching
+  #$GLOBALS['conf']['cache'] = FALSE;
+}
+
+/**
 * Generate HTML for the pp_ltw2013_programm_banner block
 * @param op the operation from the URL
 * @param delta offset
@@ -39,7 +56,7 @@ function pp_ltw2013_programm_banner_block($op='list', $delta=0) {
 				$module_path = drupal_get_path('module', 'pp_ltw2013_programm_banner');
 
 				$block_content = '<div style="padding-left: 18px;">';
-				$block_content .= '<p><a href="'.$url.'" title="Landtagswahl-Programm 2013"><img src="/'.$module_path.'/pp_ltw2013_programm_banner.png" width="160" height="220" alt="Landtagswahl-Programm 2013" border="0"/></a></p>';
+				$block_content .= '<p><div id="programme_2013"><img src="/'.$module_path.'/ltw.jpg" ref="0" width="160" height="220" alt="Landtagswahl-Programm 2013" border="0"/><img src="/'.$module_path.'/btw.jpg" ref="1" width="160" height="220" alt="Bundestagswahl-Programm 2013" border="0"/></div></p>';
 				$block_content .= '</div>';
 
 			// set up the block
