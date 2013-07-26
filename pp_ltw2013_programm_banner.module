@@ -50,8 +50,7 @@ function pp_ltw2013_programm_banner_block($op='list', $delta=0) {
 			return $block;
 		} else if ($op == 'view') {
 			// our block content
-				$title = "Landtagswahl-Programm 2013";
-				$url = "https://www.piratenpartei-hessen.de/unsere-ziele";
+				$title = "Wahlprogramme 2013";
 
 				$module_path = drupal_get_path('module', 'pp_ltw2013_programm_banner');
 
